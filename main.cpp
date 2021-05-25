@@ -60,7 +60,7 @@ struct json {
 
   // function to check whether distance between 2 points is less than 50km or not.
   void distance_calculator() {
-    if(distanceEarth(lat2d, lon2d) <= 50.0) {
+    if(distanceEarth(lat2d, lon2d) <= 50.0000) {
       id[i] = atoll(id_as_string);
       i++;
       out << "{\"user_id\": " << id[i-1] << ", \"name\": " << name << "}" << endl;
