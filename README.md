@@ -7,7 +7,7 @@
 - Compile the code using cmd: `g++ main.cpp`. 
 - After successful compilation, run it along with passing the file name
   customers.json using cmd: `./a.out ./customers.json`
-- A new file named answers.json will be created on the same directory where the
+- A new file named result.json will be created on the same directory where the
   code and customers.json file is existing.
 
 ## Approach Used

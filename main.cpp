@@ -20,11 +20,11 @@ using namespace std;
 #define earth_radius 6371.0
 
 ifstream customer_list ("customers.json");
-ofstream out ("answer.json");
+ofstream out ("result.json");
 
 // function to convert degree to radian.
 double degToRad(double deg) {
-  return ( deg * pi / 100 );
+  return ( deg * pi / 180 );
 }
 
 // function to calculate distance between 2 given locations using Great Circle Distance formula.
