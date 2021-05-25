@@ -19,7 +19,7 @@ using namespace std;
 #define pi 3.14159265358979323846
 #define earth_radius 6371.0
 
-ifstream customer_list ("customer.json");
+ifstream customer_list ("customers.json");
 ofstream out ("answer.json");
 
 // function to convert degree to radian.
@@ -32,9 +32,9 @@ double degToRad(double deg) {
 double distanceEarth(double lat2d, double lon2d) {
   double lat1, lon1, lat2, lon2, delta_lon, central_ang;
     lat1 = degToRad(lat1d);
-    lon1 = degToRoad(lon1d);
+    lon1 = degToRad(lon1d);
     lat2 = degToRad(lat2d);
-    lon2 = degToRoad(lon2d);
+    lon2 = degToRad(lon2d);
 
     delta_lon = lon2 - lon1;
 
@@ -87,7 +87,7 @@ struct json {
               latitude_as_string[x] = line[j];
               x++; j++;
             }
-            j--; latitude_as_string[x] = "\0";
+            j--; latitude_as_string[x] = '\0';
           }
           // to get longitude of the location.
           else if(f == 13) { 
@@ -96,7 +96,7 @@ struct json {
               longitude_as_string[y] = line[j];
               y++; j++;
             }
-            j--; longitude_as_string[y] = "\0";
+            j--; longitude_as_string[y] = '\0';
           }
 
           // to get id of the friend.
@@ -106,7 +106,7 @@ struct json {
               id_as_string[m] = line[j];
               m++; j++;
             }
-            j--; id_as_string[m] = "\0";
+            j--; id_as_string[m] = '\0';
             fi++;
           }
           // to get name of the friend.
@@ -116,7 +116,7 @@ struct json {
               name[n] =line[j];
               n++; j++;
             }
-            j--; name[n] = "\0";
+            j--; name[n] = '\0';
             fi++; f += 2;
           }
         }
@@ -145,22 +145,3 @@ int main() {
   
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
